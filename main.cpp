@@ -12,21 +12,21 @@ int uninitGlobal2;
 // Stack check function: receives address from caller (parent frame)
 // and compares with a local variable (child frame)
 void checkStack(int* parentAddr) {
-    int childVar = 0;
-    cout << "--- STACK SEGMENT (Cross-function comparison) ---" << endl;
     // TODO: Print parentAddr value (points to main's local var - parent frame)
     // TODO: Print &parentAddr (parameter's own address - child frame)
     // TODO: Print &childVar (local var address - child frame)
     // TODO: Print "Stack grows: DOWN" or "UP" based on comparison
     //       Compare: parentAddr > &childVar ? "DOWN" : "UP"
     //       (parent frame address vs child frame address)
-    cout << "main local address (parent frame): " << (void*)parentAddr << endl;
-    cout << "parameter address (child frame): " << (void*)&parentAddr << endl;
-    cout << "child local address (child frame): " << (void*)&childVar << endl;
+    
+    int childVar = 0;
+    cout << "--- STACK SEGMENT (Cross-function comparison) ---" << endl;
+    cout << "main local address (parent frame): " << (void*)parentAddr << endl; 
+    cout << "parameter address (child frame): " << (void*)&parentAddr << endl; 
+    cout << "child local address (child frame): " << (void*)&childVar << endl; 
     cout << endl;
-    cout << "Stack grows: " 
-        << (parentAddr > &childVar ? "DOWN" : "UP") 
-        << endl << endl;
+    
+    cout << "Stack grows: " << (parentAddr > &childVar ? "DOWN" : "UP") << endl << endl;
 }
 
 int main() {
