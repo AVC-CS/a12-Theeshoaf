@@ -20,11 +20,13 @@ void checkStack(int* parentAddr) {
     // TODO: Print "Stack grows: DOWN" or "UP" based on comparison
     //       Compare: parentAddr > &childVar ? "DOWN" : "UP"
     //       (parent frame address vs child frame address)
-    cout << "main local address (paretn frame): " << (void*)parentAddr << endl;
+    cout << "main local address (parent frame): " << (void*)parentAddr << endl;
     cout << "parameter address (child frame): " << (void*)&parentAddr << endl;
     cout << "child local address (child frame): " << (void*)&childVar << endl;
-    cout << "Stack grows: " << (parentAddr > &childVar ? "DOWN" : "UP") << endl;
     cout << endl;
+    cout << "Stack grows: " 
+        << (parentAddr > &childVar ? "DOWN" : "UP") 
+        << endl << endl;
 }
 
 int main() {
