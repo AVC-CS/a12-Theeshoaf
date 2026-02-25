@@ -81,7 +81,7 @@ int main() {
     cout << "Data: " << (void*)&globalVar << endl;
     cout << "BSS: " << (void*)&uninitGlobal1 << endl;
     cout << "Heap: " << (void*)heapVar1 << endl;
-    cout << "Top of stack (highest): " << (void*)&mainVar << endl;
+    cout << "Top address (Highest): " << (void*)&mainVar << endl;
     cout << endl;
 
     // TODO: Free all heap allocations
