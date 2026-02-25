@@ -24,9 +24,8 @@ void checkStack(int* parentAddr) {
     cout << "main local address (parent frame): " << (void*)parentAddr << endl; 
     cout << "parameter address (child frame): " << (void*)&parentAddr << endl; 
     cout << "child local address (child frame): " << (void*)&childVar << endl; 
+    cout << "Stack grows: " << (parentAddr > &childVar ? "DOWN" : "UP") << endl;
     cout << endl;
-    
-    cout << "Stack grows: " << (parentAddr > &childVar ? "DOWN" : "UP") << endl << endl;
 }
 
 int main() {
