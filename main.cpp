@@ -31,6 +31,7 @@ int main() {
 
     // TODO: Declare a local variable (STACK - will be passed to checkStack)
     int mainVar = 10;
+    checkStack(&mainVar);
     // TODO: Allocate 2 heap variables using malloc (use larger sizes, e.g. 1024)
     //       Note: new may not allocate sequentially; malloc with larger sizes
     //       is more reliable for demonstrating heap growth direction
